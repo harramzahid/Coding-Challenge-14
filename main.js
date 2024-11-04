@@ -21,7 +21,23 @@ async function fetchTickets() {
     } catch (error) {
         errorContainer.textContent = `Error: ${error.message}`;
     } finally {
-        // Hide any loading indicators if present
+        // Hide any loading indicators if present~~~
         console.log('Fetch attempt finished.');
     }
+}
+
+// Task 3 Display Tickets Dynamically on the Page
+function displayTickets(tickets) {
+    const ticketsContainer = document.getElementById('tickets');
+    tickets.forEach(ticket => {
+        const ticketElement = document.createElement('div');
+        ticketElement.className = 'ticket';
+        ticketElement.innerHTML = `
+            <p><strong>Ticket ID:</strong> ${ticket.id}</p>
+            <p><strong>Customer Name:</strong> User ${ticket.userId}</p>
+            <p><strong>Issue Description:</strong> ${ticket.title}</p>
+            <p><strong>Details:</strong> ${ticket.body}</p>
+        `;
+        ticketsContainer.appendChild(ticketElement);
+    });
 }
