@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,19 +7,17 @@
     <title>Customer Support Tickets</title>
     <style>
         body { font-family: Arial, sans-serif; }
-        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
-        .ticket { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; }
+        .ticket { border: 1px solid #ccc; padding: 10px; margin: 10px 0; }
         .error { color: red; }
+        .loading { display: none; }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Customer Support Tickets</h1>
-    </header>
-    <div class="container">
-        <div id="tickets"></div>
-        <div id="error" class="error"></div>
-    </div>
-    <script src="app.js"></script>
+    <h1>Customer Support Tickets</h1>
+    <div id="loading" class="loading">Loading tickets...</div>
+    <div id="error" class="error"></div>
+    <div id="tickets-menu"></div>
+    <script src="main.js"></script>
 </body>
 </html>
+
