@@ -1,4 +1,5 @@
-// Task 2  Fetch Tickets Using Async/Await and Handle Errors
+// Task 2  Fetch Tickets Using Async/Await and Handle Errors 
+// & Task 4 ussing finally at the end line
 document.addEventListener('DOMContentLoaded', () => {
     fetchTickets();
 });
